@@ -1,0 +1,164 @@
+.container {
+  max-width: 1322px;
+  margin: 0 auto;
+}
+
+.text-color-gold {
+  color: #e8aa31;
+}
+
+.button-main {
+  background-color: #e8aa31;
+  width: 100%;
+  min-height: 50px;
+  max-width: 228px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Header */
+
+.header_top-bar {
+  background-color: #141414;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+  align-items: center;
+  color: #ffff;
+}
+
+.header_nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header_middle-bar-wrapper {
+  background-color: #ecf1f2;
+}
+
+.header_middle-bar {
+  display: flex;
+  justify-content: space-between;
+  min-height: 90px;
+  align-items: center;
+}
+
+.header_search-input {
+  min-height: 41px;
+  min-width: 377px;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.header_logo {
+  max-width: 190px;
+}
+
+.header_contacts {
+  align-items: center;
+}
+
+.header_contacts-list {
+  display: flex;
+  gap: 50px;
+}
+
+.header_contacts-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header_contacts-item:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.header_cart-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_bottom-bar {
+  color: #fff;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.header_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 115px;
+}
+
+.header_menu-item {
+  list-style: none;
+  text-align: center;
+}
+
+/* Promo */
+
+.promo {
+  background-color: #141414;
+  background-image: url("./assets/img/PromoBackImg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 788px;
+  width: 100%;
+}
+
+.promo_content {
+  padding-top: 48px;
+}
+
+.promo_text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 915px;
+  width: 100%;
+  color: #fff;
+}
+
+.promo_main-text {
+  font-size: 36px;
+}
+
+.promo_additional-text {
+  font-size: 20px;
+}
+
+.promo_progress-bar {
+  max-width: 212px;
+}
+
+.promo_sertificates {
+  display: flex;
+  padding-top: 122px;
+  align-items: center;
+  text-align: center;
+}
+
+.promo_sertificates-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  max-width: 265px;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sertificates_item-text {
+  max-width: 225px;
+}
