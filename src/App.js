@@ -20,6 +20,9 @@ import ArticleKnives from "./assets/img/ArticleKnives.png";
 import Liteshot from "./assets/img/Liteshot.png";
 import ProductCard from "./components/ProductCard";
 import LIgthIcon from "./assets/img/LIgthIcon.png";
+import PhoneIcon from "./assets/img/PhoneIcon.js";
+import ProfileIcon from "./assets/img/ProfileIcon.js";
+import BurgerIcon from "./assets/img/BurgerIcon.js";
 
 function App() {
   const articles = [
@@ -39,7 +42,7 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className="header">
         <div className="header_top-bar">
           <nav className="header_nav container">
             <ul className="header_nav-list">
@@ -105,6 +108,18 @@ function App() {
               <li className="header_menu-item"> Фонари ARMYTEK</li>
               <li className="header_menu-item">Сопутствующие товары</li>
             </ul>
+          </div>
+          <nav className="header_nav-mobile">
+            <PhoneIcon />
+            <ProfileIcon />
+            <FavouriteIcon color="white" />
+            <CartIcon color="white" />
+            <BurgerIcon />
+          </nav>
+          <div className="header_middle-mobile">
+            <div className="header_logo">
+              <img src={Logo} alt="Logo" />
+            </div>
           </div>
         </div>
       </header>
@@ -245,7 +260,109 @@ function App() {
           </article>
         </section>
       </main>
-      <footer></footer>
+      <footer className="footer">
+        <div className="footer_top-bar">
+          <div className="footer_top-content container">
+            <h4 className="footer_top-title">
+              Златоустовские ножи интернет-магазин "ЗЛАТМАКС"
+            </h4>
+            <p className="footer_top-text">
+              Наш интернет-магазин "ЗЛАТМАКС" предлагает Вам ножи очень высокого
+              качества из города оружейников - Златоуста. Златоустовские ножи
+              известны и популярны среди потребителей как на российским рынке,
+              так и за рубежом: ножи охотничьи, хозяйственные, туристические,
+              рыбацкие, складные и метательные. Нож Златоуста - это идеальный
+              друг и товарищ в повседневной жизни и в экстремальных ситуациях.
+              На многую продукцию распространяется гарантия до 10 лет - это один
+              из главных показателей качества. Для Вас на нашем сайте "zlatmax"
+              предложен огромный ассортимент Златоустовских ножей. Наши
+              менеджеры помогут определиться и подобрать самый лучший
+              Златоустовский нож, ориентируясь на Ваши пожелания.
+            </p>
+          </div>
+        </div>
+        <div className="footer_middle-bar">
+          <div className="footer_middle-content container">
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Информация</p>
+              <li className="middle_list-item">
+                Златоустовкие ножи в Москве и Московкой области
+              </li>
+              <li className="middle_list-item">Ножевые стали</li>
+              <li className="middle_list-item">О нас</li>
+              <li className="middle_list-item">Условия оплаты и доставки</li>
+              <li className="middle_list-item">Политика конфиденциальности</li>
+            </ul>
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Служба поддержки</p>
+              <li className="middle_list-item">Контканая информация</li>
+              <li className="middle_list-item">Возврат товара</li>
+              <li className="middle_list-item">Карта сайта</li>
+            </ul>
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Дополнительно</p>
+              <li className="middle_list-item">Подарочные сертификаты</li>
+              <li className="middle_list-item">Парнеры</li>
+              <li className="middle_list-item">ТОвары со скидкой</li>
+            </ul>
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Личный кабинет</p>
+              <li className="middle_list-item">Личный кабинет</li>
+              <li className="middle_list-item">История заказов</li>
+              <li className="middle_list-item">Мои закладки</li>
+              <li className="middle_list-item">Рассылки новостей</li>
+            </ul>
+          </div>
+          <hr className="container" />
+          <div className="footer_middle-content container">
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Контакты</p>
+              <li className="middle_list-item">8 800 777 49 67</li>
+              <li className="middle_list-item">Пн-ПТ</li>
+              <li className="middle_list-item">Златоуст ул.Шоссейная</li>
+              <li className="middle_list-item">info@mgail.ru</li>
+            </ul>
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Полезные ссылки</p>
+              <li className="middle_list-item">Способы оплаты и доставки</li>
+            </ul>
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Наша гарантия</p>
+              <li className="middle_list-item">
+                Недовольны своей покупкой? Вы можете вернуть ее в течении 30
+                дней с даты получения, согласно{" "}
+                <p className="text-color-gold">нашим правилам</p>
+              </li>
+            </ul>
+            <ul className="footer_middle-list">
+              <p className="middle_list-title">Новостная рассылка</p>
+              <li className="middle_list-item">Подпишитесь прямо сейчас</li>
+              <div className="middle_list-send">
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  className="middle_list-input"
+                  placeholder="Введите ваш email"
+                />
+                <button className="button-main">></button>
+              </div>
+            </ul>
+          </div>
+          <hr className="container" />
+          <div className="footer_bottom-bar container">
+            <p className="footer-bottom-text">
+              Все материалы, размещенные на сайте, носят справочный характер и
+              не являются публичной офертой, определяемойположениями Статьи 437
+              Гражданского кодекса Российской Федерации. При копировании
+              материалов гиперссылка на www.zlatmax.ru обязательна!
+            </p>
+            <p className="footer-bottom-text">
+              Златоустовские ножи www.zlatmax.ru ©
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
