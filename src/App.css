@@ -566,10 +566,28 @@
   .catalog_content {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 auto;
   }
 
   .catalog_item {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 40px;
+  }
+
+  .catalog_item-left {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .catalog_name {
+    font-size: 20px;
+  }
+  .catalog_item-img {
+    text-align: center;
+    align-items: center;
     margin: 0 auto;
   }
 
