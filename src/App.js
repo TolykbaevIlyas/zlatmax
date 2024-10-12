@@ -8,8 +8,35 @@ import PromoIcon1 from "./assets/img/PromoIcon1";
 import PromoIcon2 from "./assets/img/PromoIcon2";
 import PromoIcon3 from "./assets/img/PromoIcon3";
 import PromoIcon4 from "./assets/img/PromoIcon4";
+import CatalogKnives1 from "./assets/img/CatalogKnives1.png";
+import CatalogKnives2 from "./assets/img/CatalogKnives2.png";
+import CatalogKnives3 from "./assets/img/CatalogKnives3.png";
+import CatalogKnives4 from "./assets/img/CatalogKnives4.png";
+import CatalogKnives5 from "./assets/img/CatalogKnives5.png";
+import CatalogKnives6 from "./assets/img/CatalogKnives6.png";
+import ProductSection from "./components/ProductSection";
+import NewProducts from "./components/NewProducts";
+import ArticleKnives from "./assets/img/ArticleKnives.png";
+import Liteshot from "./assets/img/Liteshot.png";
+import ProductCard from "./components/ProductCard";
+import LIgthIcon from "./assets/img/LIgthIcon.png";
 
 function App() {
+  const articles = [
+    { name: "Все о ножах: как правильно выбрать", img: ArticleKnives },
+    { name: "Все о ножах: как правильно выбрать", img: ArticleKnives },
+    { name: "Все о ножах: как правильно выбрать", img: ArticleKnives },
+    { name: "Все о ножах: как правильно выбрать", img: ArticleKnives },
+  ];
+  const catalog = [
+    { name: "Каталог ножей", img: CatalogKnives1 },
+    { name: "Среднеклинковое оружие", img: CatalogKnives2 },
+    { name: "Длинноклинковое оружие", img: CatalogKnives3 },
+    { name: "Сувенирные изделия", img: CatalogKnives4 },
+    { name: "Сопутствующие товары", img: CatalogKnives5 },
+    { name: "Ножевая мастерская", img: CatalogKnives6 },
+  ];
+
   return (
     <>
       <header>
@@ -129,7 +156,96 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="catalog">
+          <div className="catalog_content container">
+            {catalog.map((item) => (
+              <article className="catalog_item">
+                <div className="catalog_item-left">
+                  <h3 className="catalog_name">{item.name}</h3>
+                  <hr
+                    align="left"
+                    width="50"
+                    size="4"
+                    className="catalog-line text-color-gold"
+                  />
+                  <ul className="catalog_list">
+                    <li className="catalog_list-item">Разделочные</li>
+                    <li className="catalog_list-item">Туристические</li>
+                    <li className="catalog_list-item">Охотничьи</li>
+                  </ul>
+                </div>
+                <img
+                  src={item.img}
+                  alt="Catalog img"
+                  className="catalog_item-img"
+                />
+              </article>
+            ))}
+          </div>
+        </section>
+        <ProductSection name={"Хиты продаж"} />
+        <NewProducts />
+        <ProductSection name={"Акции"} />
+        <ProductSection name={"Акции"} />
+        <NewProducts />
+        <ProductSection name={"Акции"} />
+        <ProductSection name={"Акции"} />
+        <section className="articles container">
+          <h3 className="article_title">Наши статьи</h3>
+          <div className="articles_content">
+            {articles.map((article) => (
+              <div className="articles_item">
+                <img src={article.img} alt="Knives" />
+                <div className="article_text">
+                  <h5 className="article_name">{article.name}</h5>
+                  <p className="article_date">24.07.2019</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="lighting_category container">
+          <article className="lighting_content">
+            <div className="lighting_item">
+              <div className="lighting_text">
+                <div>
+                  <h4 className="lighting_main-text">Тактические фонари</h4>
+                  <hr className="lighting_line" />
+                </div>
+                <p className="lighting_additional-text">
+                  Lorem;alskjdfkajsd;lkfjalksjd;fl
+                  Lorem;alskjdfkajsd;lkfjalksjd;fls
+                </p>
+                <button className="button-main">Подробнее</button>
+              </div>
+              <img src={Liteshot} alt={"lightShot"} className="lighting_img" />
+            </div>
+            <div className="lighting_item">
+              <div className="lighting_text">
+                <div>
+                  <h4 className="lighting_main-text">Тактические фонари</h4>
+                  <hr className="lighting_line" />
+                </div>
+                <p className="lighting_additional-text">
+                  Lorem;alskjdfkajsd;lkfjalksjd;fl
+                  Lorem;alskjdfkajsd;lkfjalksjd;fl
+                </p>
+                <button className="button-main">Подробнее</button>
+              </div>
+              <img src={Liteshot} alt={"lightShot"} className="lighting_img" />
+            </div>
+          </article>
+        </section>
+        <section className="product">
+          <h3 className="product-title container">Фонари</h3>
+          <article className="product_content container">
+            {[1, 2, 3, 4].map(() => (
+              <ProductCard icon={LIgthIcon} />
+            ))}
+          </article>
+        </section>
       </main>
+      <footer></footer>
     </>
   );
 }
